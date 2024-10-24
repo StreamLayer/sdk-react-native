@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="green_avatar_colors">
+        <item>@color/streamlayer_green_avatar_color_1</item>
+        <item>@color/streamlayer_green_avatar_color_2</item>
+        <item>@color/streamlayer_green_avatar_color_3</item>
+        <item>@color/streamlayer_green_avatar_color_4</item>
+        <item>@color/streamlayer_green_avatar_color_5</item>
+        <item>@color/streamlayer_green_avatar_color_6</item>
+        <item>@color/streamlayer_green_avatar_color_7</item>
+        <item>@color/streamlayer_green_avatar_color_8</item>
+        <item>@color/streamlayer_green_avatar_color_9</item>
+        <item>@color/streamlayer_green_avatar_color_10</item>
+    </array>
+    <bool name="watch_party_online_counter_visible">true</bool>
+    <color name="streamlayer_green_avatar_color_1">#DCCC59</color>
+    <color name="streamlayer_green_avatar_color_10">#8B2825</color>
+    <color name="streamlayer_green_avatar_color_2">#E8AF43</color>
+    <color name="streamlayer_green_avatar_color_3">#CC8466</color>
+    <color name="streamlayer_green_avatar_color_4">#244E84</color>
+    <color name="streamlayer_green_avatar_color_5">#797B8E</color>
+    <color name="streamlayer_green_avatar_color_6">#84905B</color>
+    <color name="streamlayer_green_avatar_color_7">#C15093</color>
+    <color name="streamlayer_green_avatar_color_8">#B2312F</color>
+    <color name="streamlayer_green_avatar_color_9">#7C2E54</color>
+    <color name="streamlayer_green_colorAccent1">#EF3340</color>
+    <color name="streamlayer_green_colorAccent2">#FCE300</color>
+    <color name="streamlayer_green_colorBlink">#9A00AB83</color>
+    <color name="streamlayer_green_colorPrimary1">#006747</color>
+    <color name="streamlayer_green_colorPrimary2">#009B77</color>
+    <color name="streamlayer_green_colorSecondary1">#FFFFFF</color>
+    <color name="streamlayer_green_colorSecondary1_alpha_50">#80FFFFFF</color>
+    <color name="streamlayer_green_colorSecondary2">#888B8D</color>
+    <color name="streamlayer_green_colorSecondary2_alpha_40">#66888B8D</color>
+    <color name="streamlayer_green_fantasy_red">#DF2F3B</color>
+    <dimen name="menuButtonBottomMargin">16dp</dimen>
+    <dimen name="overlay_corner_radius">12dp</dimen>
+    <style name="GreenBaseOverlayTheme" parent="StreamLayerSDK_AppTheme">
+        <item name="slrPrimaryColor">@color/streamlayer_green_colorPrimary1</item>
+        <item name="slrPrimaryColor2">@color/streamlayer_green_colorPrimary2</item>
+        <item name="fontFamily">@font/benton_sans_medium</item>
+        <item name="slrOverlayCornerRadius">@dimen/overlay_corner_radius</item>
+        <item name="slrOverlayOutlineColor">@android:color/transparent</item>
+        <item name="slrToolbarBackground">@color/streamlayer_green_colorPrimary1</item>
+        <item name="slrToolbarPortraitBackground">@color/streamlayer_green_colorPrimary1</item>
+        <item name="slrToolbarDividerColor">@android:color/transparent</item>
+        <item name="slrSwipeHandleColor">@android:color/transparent</item>
+        <item name="slrActionColor">@color/streamlayer_green_button_color</item>
+        <item name="slrOverlayWatchPartyStartButtonColor">@color/streamlayer_green_button_color</item>
+        <item name="slrOverlayTooltipBackgroundColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrOverlayTooltipActionColor">#66FFFFFF</item>
+        <item name="slrCircleButtonColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrSenderMessageColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrReceiverMessageColor">#1AFFFFFF</item>
+        <item name="slrStartChattingIconColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrShareFriendsIconColor1">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrShareFriendsIconColor2">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrNotificationBadgeColor">@color/streamlayer_green_colorAccent2</item>
+        <item name="slrCheckColor">@color/streamlayer_green_colorPrimary1</item>
+        <item name="slrCheckBackgroundColor">@color/streamlayer_green_colorAccent2</item>
+        <item name="slrInviteViaColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrToolbarCancelColor">@color/streamlayer_green_colorSecondary1</item>
+        <item name="slrWhosWatchingSendMessageButtonColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrAvatarColors">@array/green_avatar_colors</item>
+        <item name="slrChatSendButtonColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrChatMessageStatusReadColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrShareInviteLinkIconColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrWatchPartyReturnButtonBackgroundColor">@color/streamlayer_green_colorAccent1</item>
+        <item name="slrWhosWatchingViewActiveBackgroundColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrInviteContactButtonBackgroundColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrResendContactButtonTextColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrChatSwipeZoneBackgroundColor">@color/streamlayer_green_colorBlink</item>
+        <item name="slrWelcomeDialogColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrOverlayCloseButtonStyle">@style/GreenOverlayCloseButton</item>
+    </style>
+    <style name="GreenChatTheme_Read_Message">
+        <item name="android:fontFamily">@font/benton_sans_medium</item>
+        <item name="android:textColor">@color/slr_white</item>
+    </style>
+    <style name="GreenChatTheme_Unread_Message">
+        <item name="android:fontFamily">@font/benton_sans_medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/streamlayer_green_colorPrimary2</item>
+    </style>
+    <style name="GreenGamesOverlayTheme" parent="StreamLayerSDK_GamesTheme">
+        <item name="slrPrimaryColor">@color/streamlayer_green_colorPrimary1</item>
+        <item name="slrPrimaryColor2">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrOverlayCornerRadius">@dimen/overlay_corner_radius</item>
+        <item name="slrOverlayOutlineColor">@android:color/transparent</item>
+        <item name="fontFamily">@font/benton_sans_medium</item>
+        <item name="slrToolbarBackground">@color/streamlayer_green_colorPrimary1</item>
+        <item name="slrToolbarPortraitBackground">@color/streamlayer_green_colorPrimary1</item>
+        <item name="slrToolbarDividerColor">@android:color/transparent</item>
+        <item name="slrSwipeHandleColor">@android:color/transparent</item>
+        <item name="slrActionColor">@color/streamlayer_green_button_color</item>
+        <item name="slrPickHistoryAnswerButtonColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrPickHistoryWonColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrPickHistoryLostColor">@color/streamlayer_green_colorAccent1</item>
+        <item name="slrPickHistoryDNPColor">@color/streamlayer_green_colorSecondary1</item>
+        <item name="slrLeaderboardTabUnderscoreColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrPredictionsWrongAnswerColor">@color/slr_red</item>
+        <item name="slrPredictionsTimerColor">@color/streamlayer_green_colorSecondary1</item>
+        <item name="slrPredictionsTimerFinishColor">@color/streamlayer_green_colorAccent2</item>
+        <item name="slrAvatarColors">@array/green_avatar_colors</item>
+        <item name="slrOverlayCloseButtonStyle">@style/GreenOverlayCloseButton</item>
+    </style>
+    <style name="GreenInviteOverlayTheme" parent="StreamLayerSDK_InviteTheme">
+        <item name="fontFamily">@font/benton_sans_medium</item>
+        <item name="slrOverlayCornerRadius">@dimen/overlay_corner_radius</item>
+        <item name="slrOverlayOutlineColor">@android:color/transparent</item>
+        <item name="slrToolbarBackground">@color/streamlayer_green_colorPrimary1</item>
+        <item name="slrToolbarPortraitBackground">@color/streamlayer_green_colorPrimary1</item>
+        <item name="slrToolbarDividerColor">@android:color/transparent</item>
+        <item name="slrSwipeHandleColor">@android:color/transparent</item>
+        <item name="slrActionColor">@color/streamlayer_green_button_color</item>
+        <item name="slrOverlayWatchPartyStartButtonColor">@color/streamlayer_green_button_color</item>
+        <item name="slrOverlayTooltipBackgroundColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrAvatarColors">@array/green_avatar_colors</item>
+        <item name="slrOverlayCloseButtonStyle">@style/GreenOverlayCloseButton</item>
+    </style>
+    <style name="GreenMainOverlayTheme" parent="StreamLayerSDK_MainTheme">
+        <item name="slrPrimaryColor">@color/streamlayer_green_colorPrimary1</item>
+        <item name="slrPrimaryColor2">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrOverlayMainScrollIndicatorColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrMenuSubItemBackgroundColor">#E6009B77</item>
+        <item name="fontFamily">@font/benton_sans_medium</item>
+        <item name="slrOverlayMainStreamBtnRippleDrawable">@drawable/streamlayer_green_bg_menu_ripple</item>
+        <item name="slrOverlayCornerRadius">@dimen/overlay_corner_radius</item>
+        <item name="slrOverlayOutlineColor">@android:color/transparent</item>
+        <item name="slrToolbarBackground">@color/streamlayer_green_colorPrimary1</item>
+        <item name="slrToolbarPortraitBackground">@color/streamlayer_green_colorPrimary1</item>
+        <item name="slrToolbarDividerColor">@android:color/transparent</item>
+        <item name="slrSwipeHandleColor">@android:color/transparent</item>
+        <item name="slrActionColor">@color/streamlayer_green_button_color</item>
+        <item name="slrOverlayWatchPartyStartButtonColor">@color/streamlayer_green_button_color</item>
+        <item name="slrOverlayTooltipBackgroundColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrOverlayTooltipActionColor">#66FFFFFF</item>
+        <item name="slrNotificationBadgeColor">@color/streamlayer_green_colorAccent2</item>
+        <item name="slrNotificationIconColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrMenuButtonBottomMargin">@dimen/menuButtonBottomMargin</item>
+        <item name="slrAvatarColors">@array/green_avatar_colors</item>
+        <item name="slrWatchPartyReturnButtonBackgroundColor">@color/streamlayer_green_colorAccent1</item>
+        <item name="slrWhosWatchingViewActiveBackgroundColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrGeneralErrorMessageButtonColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrMenuButtonCloseBackground">@drawable/streamlayer_green_bg_menu_close</item>
+        <item name="slrOverlayCloseButtonStyle">@style/GreenOverlayCloseButton</item>
+    </style>
+    <style name="GreenMessengerOverlayTheme" parent="GreenBaseOverlayTheme">
+        <item name="slrOverlayCornerRadius">@dimen/overlay_corner_radius</item>
+        <item name="slrOverlayOutlineColor">@android:color/transparent</item>
+        <item name="slrChatSendButtonColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrToolbarCancelColor">@color/streamlayer_green_colorSecondary1</item>
+        <item name="slrToolbarDividerColor">@android:color/transparent</item>
+        <item name="slrChatStickerButtonColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrChatToolbarWPIconColor">@color/streamlayer_green_colorSecondary1</item>
+        <item name="slrCircleButtonColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrShareFriendsIconColor1">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrShareFriendsIconColor2">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrChatKeyboardTabBackgroundColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrChatKeyboardEmojiTabBackgroundColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrChatKeyboardBackgroundColor">#161A1F</item>
+        <item name="slrChatUnreadCircleBackgroundColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrChatMutedButtonBackgroundColor">@color/slr_white_alpha_40</item>
+        <item name="slrChatUnMutedButtonBackgroundColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrChatDeleteButtonBackgroundColor">@color/streamlayer_green_colorAccent1</item>
+        <item name="slrChatsToolbarBackgroundColor">@color/streamlayer_green_colorPrimary1</item>
+        <item name="slrChatsToolbarDividerColor">@android:color/transparent</item>
+        <item name="slrChatSwipeZoneBackgroundColor">@color/streamlayer_green_colorBlink</item>
+        <item name="slrChatUnreadMessageTextAppearance">@style/GreenChatTheme_Unread_Message</item>
+        <item name="slrChatReadMessageAppearance">@style/GreenChatTheme_Read_Message</item>
+        <item name="slrOverlayCloseButtonStyle">@style/GreenOverlayCloseButton</item>
+    </style>
+    <style name="GreenOverlayCloseButton" parent="StreamLayerSDK_CloseButtonStyle">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="srcCompat">@drawable/streamlayer_green_ic_close_overlay</item>
+    </style>
+    <style name="GreenProfileOverlayTheme" parent="StreamLayerSDK_ProfileTheme">
+        <item name="fontFamily">@font/benton_sans_medium</item>
+        <item name="slrOverlayCornerRadius">@dimen/overlay_corner_radius</item>
+        <item name="slrOverlayOutlineColor">@android:color/transparent</item>
+        <item name="slrToolbarBackground">@color/streamlayer_green_colorPrimary1</item>
+        <item name="slrToolbarPortraitBackground">@color/streamlayer_green_colorPrimary1</item>
+        <item name="slrToolbarDividerColor">@android:color/transparent</item>
+        <item name="slrSwipeHandleColor">@android:color/transparent</item>
+        <item name="slrActionColor">@color/streamlayer_green_button_color</item>
+        <item name="slrOverlayWatchPartyStartButtonColor">@color/streamlayer_green_button_color</item>
+        <item name="slrOverlayTooltipBackgroundColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrNotificationIconColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="colorAccent">@color/streamlayer_green_colorAccent2</item>
+        <item name="slrCheckColor">@color/streamlayer_green_colorPrimary1</item>
+        <item name="slrAvatarColors">@array/green_avatar_colors</item>
+        <item name="slrOverlayCloseButtonStyle">@style/GreenOverlayCloseButton</item>
+    </style>
+    <style name="GreenStatisticsOverlayTheme" parent="StreamLayerSDK_StatisticsTheme">
+        <item name="fontFamily">@font/benton_sans_medium</item>
+        <item name="slrOverlayCornerRadius">@dimen/overlay_corner_radius</item>
+        <item name="slrOverlayOutlineColor">@android:color/transparent</item>
+        <item name="slrToolbarBackground">@color/streamlayer_green_colorPrimary1</item>
+        <item name="slrToolbarPortraitBackground">@color/streamlayer_green_colorPrimary1</item>
+        <item name="slrToolbarDividerColor">@android:color/transparent</item>
+        <item name="slrSwipeHandleColor">@android:color/transparent</item>
+        <item name="slrActionColor">@color/streamlayer_green_button_color</item>
+        <item name="slrCheckColor">@color/streamlayer_green_colorPrimary1</item>
+        <item name="slrGolfPlayerNegativeColor">@color/streamlayer_green_colorAccent1</item>
+        <item name="slrGolfPlayerDefaultColor">@color/streamlayer_green_colorSecondary1_alpha_50</item>
+        <item name="slrGolfPlayerPositiveColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrOverlayCloseButtonStyle">@style/GreenOverlayCloseButton</item>
+    </style>
+    <style name="GreenStreamLayerWatchParty.FullViewStyle" parent="StreamLayerSDK_WatchParty.FullViewStyle">
+        <item name="slrRoundedTop">true</item>
+        <item name="slrRoundedCornerRadius">@dimen/overlay_corner_radius</item>
+    </style>
+    <style name="GreenWatchPartyOverlayTheme" parent="StreamLayerSDK_WatchPartyTheme">
+        <item name="fontFamily">@font/benton_sans_medium</item>
+        <item name="slrPrimaryColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrPrimaryColor2">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrOverlayCornerRadius">@dimen/overlay_corner_radius</item>
+        <item name="slrOverlayOutlineColor">@android:color/transparent</item>
+        <item name="slrToolbarBackground">@color/streamlayer_green_colorPrimary1</item>
+        <item name="slrToolbarPortraitBackground">@color/streamlayer_green_colorPrimary1</item>
+        <item name="slrToolbarDividerColor">@android:color/transparent</item>
+        <item name="slrSwipeHandleColor">@android:color/transparent</item>
+        <item name="slrActionColor">@color/streamlayer_green_button_color</item>
+        <item name="slrCircleButtonColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrContactItemButtonColor">@color/streamlayer_green_button_color</item>
+        <item name="slrOverlayWatchPartyStartButtonColor">@color/streamlayer_green_button_color</item>
+        <item name="slrOverlayTooltipBackgroundColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrOverlayTooltipActionColor">#66FFFFFF</item>
+        <item name="slrInviteFriendsButtonColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrWatchPartyMessageIconColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrToolbarCancelColor">@color/streamlayer_green_colorSecondary1</item>
+        <item name="slrWatchPartyMessageProgressColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrAvatarColors">@array/green_avatar_colors</item>
+        <item name="slrShareInviteLinkIconColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrShareFriendsIconColor1">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrShareFriendsIconColor2">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrWatchPartyReturnButtonBackgroundColor">@color/streamlayer_green_colorAccent1</item>
+        <item name="slrWatchPartyParticipantsHeaderColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrWatchPartyLiveBackgroundColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrWelcomeDialogColor">@color/streamlayer_green_colorPrimary2</item>
+        <item name="slrWatchPartyOnlineCounterVisible">@bool/watch_party_online_counter_visible</item>
+        <item name="slrOverlayCloseButtonStyle">@style/GreenOverlayCloseButton</item>
+        <item name="slrWatchPartyFullViewStyle">@style/GreenStreamLayerWatchParty.FullViewStyle</item>
+    </style>
+</resources>

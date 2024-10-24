@@ -1,0 +1,131 @@
+buildscript {
+
+  ext.safeExtGet = { prop, fallback ->
+    rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+  }
+
+  repositories {
+    google()
+    mavenCentral()
+  }
+
+  dependencies {
+    classpath "com.android.tools.build:gradle:${safeExtGet('gradlePluginVersion', '7.2.2')}"
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${safeExtGet('kotlinVersion', '1.7.0')}"
+  }
+}
+
+def isNewArchitectureEnabled() {
+  return rootProject.hasProperty("newArchEnabled") && rootProject.getProperty("newArchEnabled") == "true"
+}
+
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+
+if (isNewArchitectureEnabled()) {
+  apply plugin: "com.facebook.react"
+}
+
+def safeExtGet(prop, fallback) {
+  rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+}
+
+def supportsNamespace() {
+  def parsed = com.android.Version.ANDROID_GRADLE_PLUGIN_VERSION.tokenize('.')
+  def major = parsed[0].toInteger()
+  def minor = parsed[1].toInteger()
+
+  // Namespace support was added in 7.3.0
+  return (major == 7 && minor >= 3) || major >= 8
+}
+
+def enableExoPlayer = safeExtGet("Streamlayer_enableExoPlayer", 'true').toBoolean()
+
+android {
+  if (supportsNamespace()) {
+    namespace "io.streamlayer.react"
+
+    sourceSets {
+      main {
+        manifest.srcFile "src/main/AndroidManifestNew.xml"
+      }
+    }
+  }
+
+  compileSdkVersion safeExtGet('Streamlayer_compileSdkVersion', 34)
+
+  defaultConfig {
+    minSdkVersion safeExtGet('Streamlayer_minSdkVersion', 21)
+    targetSdkVersion safeExtGet('Streamlayer_targetSdkVersion', 34)
+
+    buildConfigField "boolean", "EXTENSION_EXO_PLAYER", "${enableExoPlayer}"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+    }
+  }
+
+  lintOptions {
+    disable "GradleCompatible"
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+
+  packagingOptions {
+    exclude 'META-INF/kotlin-stdlib.kotlin_module'
+    exclude 'META-INF/annotation-experimental_release.kotlin_module'
+  }
+}
+
+rootProject.allprojects {
+  repositories {
+    maven { url("$rootDir/../node_modules/react-native-streamlayer/android/local") }
+  }
+}
+
+repositories {
+  mavenLocal()
+  maven {
+    // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+    url("$rootDir/../node_modules/react-native/android")
+  }
+  google()
+  mavenCentral()
+  maven { url("local") }
+  maven { url 'https://jitpack.io' }
+}
+
+def exoPlayer = "2.18.2"
+def koin = "3.4.0" // update this version only based on expo project
+def streamLayer = "2.17.0"
+
+dependencies {
+  implementation "com.facebook.react:react-native:+"
+  implementation "org.jetbrains.kotlin:kotlin-stdlib:${safeExtGet('kotlinVersion', '1.7.0')}"
+
+  // use expo compatible koin 3.4.0 versions, otherwise it's not possible to start our sdk on expo application
+  implementation "io.insert-koin:koin-core:$koin"
+  implementation "io.insert-koin:koin-android:$koin"
+  implementation "io.insert-koin:koin-androidx-navigation:$koin"
+  api("io.streamlayer:androidsdk:$streamLayer") {
+    exclude group: "io.insert-koin", module: "koin-core"
+    exclude group: "io.insert-koin", module: "koin-android"
+    exclude group: "io.insert-koin", module: "koin-androidx-navigation"
+  }
+
+  // exo player extension
+  // TODO: we need a find solution for conditional process - compileOnly will not work because of failed Android resource linking
+  if (enableExoPlayer) {
+    implementation "com.google.android.exoplayer:exoplayer:$exoPlayer"
+  } else {
+    println('Disable Exo Player extension.')
+    // use compileOnly here later
+    implementation "com.google.android.exoplayer:exoplayer:$exoPlayer"
+  }
+}
+

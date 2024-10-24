@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="menuButtonBottomMargin">16dp</dimen>
+    <dimen name="overlay_corner_radius">12dp</dimen>
+    <bool name="watch_party_online_counter_visible">true</bool>
+</resources>
