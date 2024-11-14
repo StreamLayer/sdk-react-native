@@ -22,9 +22,8 @@ class StreamLayerModule: NSObject {
         guard let config = config, config.count > 0 else { return }
         let slConfiguration = StreamLayerConfiguration.fromDictionary(config)
 
-        StreamLayer.config.triviaBalanceButtonVerticalCustomPadding = UIEdgeInsets(top: 45, left:
-                                                                                    0, bottom: 0, right: -UIScreen.main.bounds.width + 20)
-        StreamLayer.config.triviaBalanceButtonHorizontalCustomPadding = UIEdgeInsets(top: 41, left: 37, bottom: 0, right: -UIScreen.main.bounds.height + 54)
+        StreamLayer.config.triviaBalanceButtonVerticalCustomPadding = UIEdgeInsets(top: 10, left: 20, bottom: 0, right: 20)
+        StreamLayer.config.triviaBalanceButtonHorizontalCustomPadding = UIEdgeInsets(top: 21, left: 17, bottom: 0, right: 34)
         if(!StreamLayer.isInitialized()) {
             StreamLayer.initSDK(with: slConfiguration.sdkKey,
                                 isDebug: slConfiguration.isLoggingEnabled,
@@ -64,15 +63,12 @@ class StreamLayerModule: NSObject {
       // Deep links handler
     @objc(handleDeepLink:resolver:rejecter:)
     func handleDeepLink(params: NSDictionary, resolver: @escaping RCTPromiseResolveBlock, rejecter: @escaping RCTPromiseRejectBlock) -> Void {
-        print("DEEP LINK BRIDGE")
-        print(params)
-        
         
         let paramsDict = params as? [String: AnyObject]
-        
-        let result = StreamLayer.handleDeepLink(params: paramsDict)
- 
-        resolver(result)
+        DispatchQueue.main.async {
+            let result = StreamLayer.handleDeepLink(params: paramsDict)
+            resolver(result)
+        }
     }
 
     @objc(authorizationBypass:token:resolver:rejecter:)

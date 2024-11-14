@@ -176,12 +176,7 @@ export class StreamLayerView extends PureComponent<React.PropsWithChildren<Strea
   handleInvite(invite: StreamLayerInvite) {
     const viewId = findNodeHandle(this._root.current);
     const command = (UIManager as { [index: string]: any })[ComponentName].Commands.handleInvite;
-    console.log("HANDLEINVITE")
     if(invite){
-      console.log("COMMAND")
-      console.log(command)
-      console.log(typeof command)
-      console.log(invite)
       UIManager.dispatchViewManagerCommand(viewId, Platform.select({ ios: command, android: `${command}` }), [invite]);
     }
   }
