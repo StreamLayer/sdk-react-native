@@ -197,7 +197,7 @@ export class StreamLayerView extends PureComponent<React.PropsWithChildren<Strea
           ref={this._root}
           config={config || {}}
           hocModeEnabled={playerView !== undefined}
-          applyWindowInsets={true}
+          applyWindowInsets={applyWindowInsets}
           onNativeRequestStream={this._onNativeRequestStream}
           onNativeLBarStateChanged={this._onNativeLBarStateChanged}
           onNativeRequestAudioDucking={this._onNativeRequestAudioDucking}

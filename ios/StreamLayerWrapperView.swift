@@ -177,10 +177,12 @@ class StreamLayerWrapperView: RCTView {
 // MARK: - SLROverlayDelegate & SLROverlayDataSource
 
 extension StreamLayerWrapperView: SLROverlayDelegate, SLROverlayDataSource {
-    func requestAudioDucking() {
-        eventEmitter?.requestAudioDucking(level: 1.0)
+    
+    func requestAudioDucking(_ mute: Bool) {
+        eventEmitter?.requestAudioDucking(level: mute ? 0.0 : 0.7)
     }
-
+    
+    
     func disableAudioDucking() {
         eventEmitter?.disableAudioDucking()
     }

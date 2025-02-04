@@ -70,7 +70,7 @@ export class StreamLayer {
   }
 
   static logout(): Promise<void> {
-    return StreamLayerModule.removeOverlay() 
+    return StreamLayerModule.logout() 
   }
 
   static removeOverlay(): Promise<void> {
@@ -100,7 +100,7 @@ export class StreamLayer {
   static handleDeepLink(params: DeepLinkParams): Promise<boolean> {
     return StreamLayerModule.handleDeepLink(params);
   }
-  
+
 }
 
 const LINKING_ERROR =
